@@ -1,7 +1,11 @@
+$button-background: hotpink;
+@import "./node_modules/foundation-apps/scss/foundation";
+
 body {
-    color: deeppink;
+    
     
     h1 {
         font-family: sans-serif;
+        color: deeppink;
     }
 }

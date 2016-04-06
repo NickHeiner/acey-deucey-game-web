@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "static -a 0.0.0.0",
-    "test": "jshint -c .jshintrc index.js",
-    "build": "node-sass index.scss built.css",
-    "build-styles-watch": "node-sass -w index.scss built.css"
+    "test": "jshint -c .jshintrc index.js && npm run build",
+    "build": "node-sass --include-path node_modules/foundation-apps/scss/ index.scss built.css",
+    "build-styles-watch": "node-sass -w --include-path node_modules/foundation-apps/scss/foundation index.scss built.css"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/KatherineThompson/acey-deucey-game-web#readme",
   "devDependencies": {
+    "foundation-apps": "^1.2.0",
     "jshint": "^2.9.1",
     "node-sass": "^3.4.2",
     "node-static": "^0.7.7"
