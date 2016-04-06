@@ -4,7 +4,10 @@
   "description": "A web app for the backgammon variant acey deucey",
   "main": "index.js",
   "scripts": {
-    "test": "jshint -c .jshintrc index.js"
+    "start": "static -a 0.0.0.0",
+    "test": "jshint -c .jshintrc index.js",
+    "build": "node-sass index.scss built.css",
+    "build-styles-watch": "node-sass -w index.scss built.css"
   },
   "repository": {
     "type": "git",
@@ -20,6 +23,8 @@
   },
   "homepage": "https://github.com/KatherineThompson/acey-deucey-game-web#readme",
   "devDependencies": {
-    "jshint": "^2.9.1"
+    "jshint": "^2.9.1",
+    "node-sass": "^3.4.2",
+    "node-static": "^0.7.7"
   }
 }
