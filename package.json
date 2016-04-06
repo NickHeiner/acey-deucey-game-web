@@ -1,0 +1,25 @@
+{
+  "name": "acey-deucey-game-web",
+  "version": "1.0.0",
+  "description": "A web app for the backgammon variant acey deucey",
+  "main": "index.js",
+  "scripts": {
+    "test": "jshint -c .jshintrc index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KatherineThompson/acey-deucey-game-web.git"
+  },
+  "keywords": [
+    "game"
+  ],
+  "author": "Katherine Thompson ket29@cornell.edu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KatherineThompson/acey-deucey-game-web/issues"
+  },
+  "homepage": "https://github.com/KatherineThompson/acey-deucey-game-web#readme",
+  "devDependencies": {
+    "jshint": "^2.9.1"
+  }
+}
