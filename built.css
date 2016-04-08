@@ -5465,24 +5465,30 @@ blockquote p {
 .float-none {
   float: none; }
 
+body {
+  background-color: lightgray; }
+
 #board {
   border: 10px solid mediumseagreen; }
   #board #home {
     border-right: 5px solid mediumseagreen; }
+    #board #home p {
+      margin-left: auto;
+      margin-right: auto; }
     #board #home #top-home {
       border-bottom: 5px solid mediumseagreen; }
     #board #home #bottom-home {
       border-top: 5px solid mediumseagreen; }
   #board #spaces {
     border-left: 5px solid mediumseagreen; }
-  #board #bar {
-    background-color: mediumseagreen; }
+    #board #spaces #bar {
+      background-color: mediumseagreen; }
 
 .piece {
   font-size: 1rem;
   width: 1.5rem;
   height: 1.5rem;
-  background: red;
+  background: #00558b;
   color: white; }
 
 .dice {
@@ -5492,3 +5498,11 @@ blockquote p {
   background: blue;
   color: white;
   border-radius: 0; }
+
+.red {
+  background-color: red;
+  color: antiquewhite; }
+
+.white {
+  background-color: antiquewhite;
+  color: red; }

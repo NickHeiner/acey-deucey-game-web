@@ -1,31 +1,44 @@
 @import "foundation";
+$borderColor: mediumseagreen;
+$innerBorder: 5px solid $borderColor;
+body {
+    background-color: lightgray;
+}
 
 #board {
-    border: 10px solid mediumseagreen;
+    border: 10px solid $borderColor;
     
     #home {
-        border-right: 5px solid mediumseagreen;
+        border-right: $innerBorder;
+        
+        p {
+            margin-left: auto;
+            margin-right: auto;
+        }
         
         #top-home {
-            border-bottom: 5px solid mediumseagreen;
+            border-bottom: $innerBorder;
         }
         
         #bottom-home {
-            border-top: 5px solid mediumseagreen;
+            border-top: $innerBorder;
         }
     }
     
     #spaces {
-        border-left: 5px solid mediumseagreen;
+        border-left: $innerBorder;
+
+        #bar {
+            background-color: $borderColor;
+        }
     }
-    #bar {
-        background-color: mediumseagreen;
-    }
+
 }
+
+
 
 .piece {
     @include badge (
-        $background: red,
         $color: white,
         $diameter: 1.5rem,
         $fontsize: 1rem
@@ -40,4 +53,17 @@
         $fontsize: 1rem
     );
     border-radius: 0;
+}
+
+$red: red;
+$white: antiquewhite;
+
+.red {
+    background-color: $red;
+    color: $white;
+}
+
+.white{
+    background-color: $white;
+    color: $red;
 }
