@@ -1,11 +1,26 @@
-$button-background: violet;
 @import "foundation";
 
-body {
+#board {
+    border: 10px solid mediumseagreen;
     
-    
-    h1 {
-        font-family: sans-serif;
-        color: deeppink;
+    #home {
+        border-right: 5px solid mediumseagreen;
+        
+        #top-home {
+            border-bottom: 5px solid mediumseagreen;
+        }
+        
+        #bottom-home {
+            border-top: 5px solid mediumseagreen;
+        }
     }
+    
+    #spaces {
+        border-left: 5px solid mediumseagreen;
+    }
+}
+
+.piece {
+    border-radius: 100%;
+    border: 2px solid;
 }

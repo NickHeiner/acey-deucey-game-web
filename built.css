@@ -920,8 +920,8 @@ a, [ui-sref], [zf-open], [zf-close], [zf-toggle] {
   display: inline-block;
   width: auto;
   margin: 0 1rem 1rem 0;
-  background: violet;
-  color: #000; }
+  background: #00558b;
+  color: #fff; }
   .button .iconic {
     width: 1em;
     height: 1em;
@@ -929,14 +929,14 @@ a, [ui-sref], [zf-open], [zf-close], [zf-toggle] {
     margin-right: 0.25em;
     margin-top: -2px; }
   .button:hover, .button:focus {
-    background: #e751e7;
-    color: #000; }
+    background: #004876;
+    color: #fff; }
   .button .iconic * {
-    fill: #000;
-    stroke: #000; }
+    fill: #fff;
+    stroke: #fff; }
     .button .iconic *.iconic-property-accent {
-      fill: #000;
-      stroke: #000; }
+      fill: #fff;
+      stroke: #fff; }
   .button.tiny {
     font-size: 0.63rem; }
     .button.tiny .iconic {
@@ -1039,25 +1039,25 @@ a, [ui-sref], [zf-open], [zf-close], [zf-toggle] {
         fill: #fff;
         stroke: #fff; }
   .button.hollow {
-    border: 1px solid violet;
+    border: 1px solid #00558b;
     background: transparent;
-    color: violet; }
+    color: #00558b; }
     .button.hollow:hover, .button.hollow:focus {
-      border-color: #f2a1f2;
+      border-color: #008ee8;
       background: transparent;
-      color: #f2a1f2; }
+      color: #008ee8; }
     .button.hollow .iconic * {
-      fill: violet;
-      stroke: violet; }
+      fill: #00558b;
+      stroke: #00558b; }
       .button.hollow .iconic *.iconic-property-accent {
-        fill: violet;
-        stroke: violet; }
+        fill: #00558b;
+        stroke: #00558b; }
     .button.hollow:hover .iconic * {
-      fill: #f2a1f2;
-      stroke: #f2a1f2; }
+      fill: #008ee8;
+      stroke: #008ee8; }
       .button.hollow:hover .iconic *.iconic-property-accent {
-        fill: #f2a1f2;
-        stroke: #f2a1f2; }
+        fill: #008ee8;
+        stroke: #008ee8; }
     .button.hollow.secondary {
       border: 1px solid #f1f1f1;
       background: transparent;
@@ -5465,6 +5465,17 @@ blockquote p {
 .float-none {
   float: none; }
 
-body h1 {
-  font-family: sans-serif;
-  color: deeppink; }
+#board {
+  border: 10px solid mediumseagreen; }
+  #board #home {
+    border-right: 5px solid mediumseagreen; }
+    #board #home #top-home {
+      border-bottom: 5px solid mediumseagreen; }
+    #board #home #bottom-home {
+      border-top: 5px solid mediumseagreen; }
+  #board #spaces {
+    border-left: 5px solid mediumseagreen; }
+
+.piece {
+  border-radius: 100%;
+  border: 2px solid; }
