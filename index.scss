@@ -24,8 +24,12 @@
 }
 
 .piece {
-    border-radius: 100%;
-    border: 2px solid;
+    @include badge (
+        $background: red,
+        $color: white,
+        $diameter: 1.5rem,
+        $fontsize: 1rem
+    );
 }
 
 .dice {
