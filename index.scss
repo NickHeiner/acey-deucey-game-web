@@ -18,9 +18,16 @@
     #spaces {
         border-left: 5px solid mediumseagreen;
     }
+    #bar {
+        background-color: mediumseagreen;
+    }
 }
 
 .piece {
     border-radius: 100%;
     border: 2px solid;
+}
+
+.dice {
+    border: 1px solid black;
 }

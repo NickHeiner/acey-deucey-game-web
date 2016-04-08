@@ -5475,7 +5475,12 @@ blockquote p {
       border-top: 5px solid mediumseagreen; }
   #board #spaces {
     border-left: 5px solid mediumseagreen; }
+  #board #bar {
+    background-color: mediumseagreen; }
 
 .piece {
   border-radius: 100%;
   border: 2px solid; }
+
+.dice {
+  border: 1px solid black; }
