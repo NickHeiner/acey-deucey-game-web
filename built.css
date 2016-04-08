@@ -920,7 +920,7 @@ a, [ui-sref], [zf-open], [zf-close], [zf-toggle] {
   display: inline-block;
   width: auto;
   margin: 0 1rem 1rem 0;
-  background: hotpink;
+  background: violet;
   color: #000; }
   .button .iconic {
     width: 1em;
@@ -929,7 +929,7 @@ a, [ui-sref], [zf-open], [zf-close], [zf-toggle] {
     margin-right: 0.25em;
     margin-top: -2px; }
   .button:hover, .button:focus {
-    background: #ff3399;
+    background: #e751e7;
     color: #000; }
   .button .iconic * {
     fill: #000;
@@ -1039,25 +1039,25 @@ a, [ui-sref], [zf-open], [zf-close], [zf-toggle] {
         fill: #fff;
         stroke: #fff; }
   .button.hollow {
-    border: 1px solid hotpink;
+    border: 1px solid violet;
     background: transparent;
-    color: hotpink; }
+    color: violet; }
     .button.hollow:hover, .button.hollow:focus {
-      border-color: #ff8fc7;
+      border-color: #f2a1f2;
       background: transparent;
-      color: #ff8fc7; }
+      color: #f2a1f2; }
     .button.hollow .iconic * {
-      fill: hotpink;
-      stroke: hotpink; }
+      fill: violet;
+      stroke: violet; }
       .button.hollow .iconic *.iconic-property-accent {
-        fill: hotpink;
-        stroke: hotpink; }
+        fill: violet;
+        stroke: violet; }
     .button.hollow:hover .iconic * {
-      fill: #ff8fc7;
-      stroke: #ff8fc7; }
+      fill: #f2a1f2;
+      stroke: #f2a1f2; }
       .button.hollow:hover .iconic *.iconic-property-accent {
-        fill: #ff8fc7;
-        stroke: #ff8fc7; }
+        fill: #f2a1f2;
+        stroke: #f2a1f2; }
     .button.hollow.secondary {
       border: 1px solid #f1f1f1;
       background: transparent;

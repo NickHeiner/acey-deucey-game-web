@@ -6,8 +6,8 @@
   "scripts": {
     "start": "static -a 0.0.0.0",
     "test": "jshint -c .jshintrc index.js && npm run build",
-    "build": "node-sass --include-path node_modules/foundation-apps/scss/ index.scss built.css",
-    "build-styles-watch": "node-sass -w --include-path node_modules/foundation-apps/scss/foundation index.scss built.css"
+    "build": "node-sass --include-path node_modules/foundation-apps/scss index.scss built.css",
+    "build-styles-watch": "node-sass -w --include-path node_modules/foundation-apps/scss index.scss built.css"
   },
   "repository": {
     "type": "git",
