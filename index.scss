@@ -33,5 +33,11 @@
 }
 
 .dice {
-    border: 1px solid black;
+    @include badge (
+        $background: blue,
+        $color: white,
+        $diameter: 1.5rem,
+        $fontsize: 1rem
+    );
+    border-radius: 0;
 }
