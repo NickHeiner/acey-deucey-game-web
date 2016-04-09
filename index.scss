@@ -7,24 +7,24 @@ body {
 
 #board {
     border: 10px solid $borderColor;
-    
+
     #home {
         border-right: $innerBorder;
-        
+
         p {
             margin-left: auto;
             margin-right: auto;
         }
-        
+
         #top-home {
             border-bottom: $innerBorder;
         }
-        
+
         #bottom-home {
             border-top: $innerBorder;
         }
     }
-    
+
     #spaces {
         border-left: $innerBorder;
 
@@ -35,14 +35,9 @@ body {
 
 }
 
-
-
 .piece {
-    @include badge (
-        $color: white,
-        $diameter: 1.5rem,
-        $fontsize: 1rem
-    );
+    width: 100%;
+    height: 100%;
 }
 
 .dice {
@@ -57,11 +52,11 @@ body {
 
 .space {
     width: 10%;
-    height: 0;    
+    height: 0;
     padding-left:10%;
     padding-bottom: 10%;
     overflow: hidden;
-    
+
     &:after {
         content: "";
         display: block;
@@ -70,9 +65,9 @@ body {
         margin-left:-500px;
         border-left: 500px solid transparent;
         border-right: 500px solid transparent;
-        border-bottom: 500px solid #4679BD;        
+        border-bottom: 500px solid #4679BD;
     }
-    
+
     @extend .small-2;
     @extend .grid-block;
 }
