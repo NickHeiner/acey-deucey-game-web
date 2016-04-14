@@ -1,26 +1,144 @@
 @import "foundation";
+$border-color: mediumseagreen;
+$inner-border: 5px solid $border-color;
+$red: red;
+$white: ivory;
+$space-color: green;
+
+body {
+    background-color: lightgray;
+}
+
+.grid-frame {
+    min-height: 313px;
+}
 
 #board {
-    border: 10px solid mediumseagreen;
+    border: 10px solid $border-color;
     
     #home {
-        border-right: 5px solid mediumseagreen;
+        border-right: $inner-border;
+        
+        @include grid-size(1.5);
+        
+        h4 {
+            margin-left: auto;
+            margin-right: auto;
+        }
         
         #top-home {
-            border-bottom: 5px solid mediumseagreen;
+            border-bottom: $inner-border;
+        }
+        
+        #message-area {
+            padding: .15em;
         }
         
         #bottom-home {
-            border-top: 5px solid mediumseagreen;
+            border-top: $inner-border;
         }
     }
     
     #spaces {
-        border-left: 5px solid mediumseagreen;
+        border-left: $inner-border;
+
+        #bar {
+            background-color: $border-color;
+        }
     }
+
 }
 
 .piece {
-    border-radius: 100%;
-    border: 2px solid;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    &.white {
+        circle {
+            fill: $white;
+        }
+        text {
+            fill: $red;
+        }
+        &:hover {
+            circle {
+                fill: darken($white, 25%);
+            }
+        }    
+    }        
+    &.red {
+        circle {
+            fill: $red;
+        }
+        text {
+            fill: $white;
+        }
+        &:hover {
+            circle {
+                fill: darken($red, 25%);
+            }
+        }
+    }
+}
+
+.top {
+    margin-bottom: auto;
+}
+
+.bottom {
+    margin-top: auto;
+}
+
+.dice {
+    @include badge (
+        $diameter: 3rem,
+        $fontsize: 1.5rem
+    );
+    border-radius: 0;
+    cursor: default;
+    
+    &.red {
+        color: $white;
+        background-color: $red;
+    }
+    
+    &.white {
+        color: $red;
+        background-color: $white;
+        
+    }
+}
+
+.space {
+    width: 100%;
+    height: 100%;
+    polygon {
+        fill: $space-color;         
+    }
+}
+
+.red-text {
+    color: $red;
+}
+
+.white-text {
+    color: $white;
+}
+
+.grayed-out {
+    opacity: .35;
+    cursor: default;
+}
+
+.winner {
+    font-weight: bold;
+    font-size: 4rem;
+}
+
+#win-message {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
