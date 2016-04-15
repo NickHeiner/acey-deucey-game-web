@@ -5468,9 +5468,6 @@ blockquote p {
 body {
   background-color: lightgray; }
 
-.grid-frame {
-  min-height: 313px; }
-
 #board {
   border: 10px solid mediumseagreen; }
   #board #home {
@@ -5479,36 +5476,116 @@ body {
     max-width: 12.5%; }
     #board #home h4 {
       margin-left: auto;
-      margin-right: auto; }
+      margin-right: auto;
+      margin-top: 0.7rem;
+      margin-bottom: 0; }
     #board #home #top-home {
       border-bottom: 5px solid mediumseagreen; }
-    #board #home #message-area {
-      padding: .15em; }
     #board #home #bottom-home {
       border-top: 5px solid mediumseagreen; }
   #board #spaces {
     border-left: 5px solid mediumseagreen; }
     #board #spaces #bar {
       background-color: mediumseagreen; }
+      #board #spaces #bar .button {
+        padding: .85em .5em; }
+
+.grid-frame {
+  min-height: 313px; }
+
+.message-area {
+  padding: .15em; }
+  .message-area#left-message-area:not(.ng-hide) {
+    display: block !important;
+    display: none !important; }
+  .message-area#left-message-area:not(.ng-hide) {
+    display: none !important; }
+    @media only screen and (min-width: 64.0625em) {
+      .message-area#left-message-area:not(.ng-hide) {
+        display: block !important; } }
+  .message-area#right-message-area {
+    border: 2px solid mediumseagreen;
+    background-color: #a7e1c1; }
+    .message-area#right-message-area:not(.ng-hide) {
+      display: none !important;
+      display: block !important; }
+    .message-area#right-message-area:not(.ng-hide) {
+      display: block !important; }
+      @media only screen and (min-width: 64.0625em) {
+        .message-area#right-message-area:not(.ng-hide) {
+          display: none !important; } }
+
+.piece.white.winning {
+  cursor: default; }
+
+.piece.white circle {
+  fill: ivory; }
+
+.piece.white text {
+  fill: red; }
+
+.piece.white:hover:not(.winning) circle {
+  fill: #ffff71; }
+
+dice.white span.dice, div span.dice {
+  color: red;
+  background-color: ivory; }
+
+p .white, p.white {
+  color: ivory; }
+
+.piece.red.winning {
+  cursor: default; }
+
+.piece.red circle {
+  fill: red; }
+
+.piece.red text {
+  fill: ivory; }
+
+.piece.red:hover:not(.winning) circle {
+  fill: maroon; }
+
+dice.red span.dice, div span.dice {
+  color: ivory;
+  background-color: red; }
+
+p .red, p.red {
+  color: red; }
 
 .piece {
-  width: 100%;
-  height: 100%;
   cursor: pointer; }
-  .piece.white circle {
-    fill: ivory; }
-  .piece.white text {
-    fill: red; }
-  .piece.white:hover circle {
-    fill: #ffff71; }
-  .piece.red circle {
-    fill: red; }
-  .piece.red text {
-    fill: ivory; }
-  .piece.red:hover circle {
-    fill: maroon; }
+  #home .piece {
+    height: 55%;
+    width: 55%; }
+    @media only screen and (min-width: 64.0625em) {
+      #home .piece {
+        height: 100%;
+        width: 50%; } }
+  #bar .piece {
+    width: 80%;
+    height: 45%; }
+    @media only screen and (min-width: 64.0625em) {
+      #bar .piece {
+        width: 80%;
+        height: 20%; } }
 
-.top {
+space {
+  display: flex;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  backface-visibility: hidden;
+  flex: 0 0 16.66667%;
+  max-width: 16.66667%;
+  flex-flow: row wrap;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  justify-content: flex-start;
+  order: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
   margin-bottom: auto; }
 
 .bottom {
@@ -5522,24 +5599,12 @@ body {
   color: #fff;
   border-radius: 0;
   cursor: default; }
-  .dice.red {
-    color: ivory;
-    background-color: red; }
-  .dice.white {
-    color: red;
-    background-color: ivory; }
 
 .space {
   width: 100%;
   height: 100%; }
   .space polygon {
     fill: green; }
-
-.red-text {
-  color: red; }
-
-.white-text {
-  color: ivory; }
 
 .grayed-out {
   opacity: .35;
@@ -5548,10 +5613,3 @@ body {
 .winner {
   font-weight: bold;
   font-size: 4rem; }
-
-#win-message {
-  position: absolute;
-  z-index: 1;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); }

@@ -1,16 +1,15 @@
 @import "foundation";
+$breakpoints: map-merge($breakpoints, (large: 1025px));
+
 $border-color: mediumseagreen;
 $inner-border: 5px solid $border-color;
 $red: red;
 $white: ivory;
 $space-color: green;
+$background-color: lightgray;
 
 body {
-    background-color: lightgray;
-}
-
-.grid-frame {
-    min-height: 313px;
+    background-color: $background-color;
 }
 
 #board {
@@ -24,14 +23,12 @@ body {
         h4 {
             margin-left: auto;
             margin-right: auto;
+            margin-top: 0.7rem;
+            margin-bottom: 0;
         }
         
         #top-home {
             border-bottom: $inner-border;
-        }
-        
-        #message-area {
-            padding: .15em;
         }
         
         #bottom-home {
@@ -44,50 +41,106 @@ body {
 
         #bar {
             background-color: $border-color;
+            
+            .button {
+                padding: .85em .5em;
+            }
         }
     }
 
 }
+
+.grid-frame {
+    min-height: 313px;
+}
+
+.message-area {
+    padding: .15em;
+    
+    &#left-message-area {
+        @include hide-for(small);
+        @include show-for(large);
+    }
+    
+    &#right-message-area {
+        @include show-for(small);
+        @include hide-for(large);
+        border: 2px solid $border-color;
+        background-color: lighten($border-color, 30%);
+    }
+}
+
+@mixin piece-classes($name, $primary-color, $secondary-color) {
+    .piece.#{$name} {
+        &.winning {
+            cursor: default;
+        }
+        circle {
+            fill: $primary-color;
+        }
+        text {
+            fill: $secondary-color;
+        }
+        
+        &:hover:not(.winning) {
+            circle {
+                fill: darken($primary-color, 25%);
+            }
+        }            
+    }
+    
+    dice.#{$name}, div {
+        span.dice {
+            color: $secondary-color;
+            background-color: $primary-color;
+        }
+    }
+    
+    p .#{$name}, p.#{$name} {   
+        color: $primary-color;
+    }
+}
+
+@include piece-classes("white", $white, $red);
+@include piece-classes("red", $red, $white);
 
 .piece {
-    width: 100%;
-    height: 100%;
     cursor: pointer;
-    &.white {
-        circle {
-            fill: $white;
+    
+    #home & {
+        @include breakpoint(small) {
+            height: 55%;
+            width: 55%;
         }
-        text {
-            fill: $red;
+        @include breakpoint(large) {
+            height: 100%;
+            width: 50%;
         }
-        &:hover {
-            circle {
-                fill: darken($white, 25%);
-            }
-        }    
-    }        
-    &.red {
-        circle {
-            fill: $red;
+    }
+    
+    #bar & {
+        @include breakpoint(small) {
+            width: 80%;
+            height: 45%;
         }
-        text {
-            fill: $white;
-        }
-        &:hover {
-            circle {
-                fill: darken($red, 25%);
-            }
+        @include breakpoint(large) {
+            width: 80%;
+            height: 20%;
         }
     }
 }
 
-.top {
+space {
+    @include grid-block(2);
     margin-bottom: auto;
 }
+
+
 
 .bottom {
     margin-top: auto;
 }
+
 
 .dice {
     @include badge (
@@ -96,17 +149,6 @@ body {
     );
     border-radius: 0;
     cursor: default;
-    
-    &.red {
-        color: $white;
-        background-color: $red;
-    }
-    
-    &.white {
-        color: $red;
-        background-color: $white;
-        
-    }
 }
 
 .space {
@@ -117,14 +159,6 @@ body {
     }
 }
 
-.red-text {
-    color: $red;
-}
-
-.white-text {
-    color: $white;
-}
-
 .grayed-out {
     opacity: .35;
     cursor: default;
@@ -133,12 +167,4 @@ body {
 .winner {
     font-weight: bold;
     font-size: 4rem;
-}
-
-#win-message {
-    position: absolute;
-    z-index: 1;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
