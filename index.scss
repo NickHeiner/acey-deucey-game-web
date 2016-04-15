@@ -132,15 +132,15 @@ body {
 
 space {
     @include grid-block(2);
-    margin-bottom: auto;
+    
+    .top {
+        margin-bottom: auto;
+    }
+
+    .bottom {
+        margin-top: auto;
+    }
 }
-
-
-
-.bottom {
-    margin-top: auto;
-}
-
 
 .dice {
     @include badge (

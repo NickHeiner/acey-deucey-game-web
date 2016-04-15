@@ -5585,11 +5585,11 @@ space {
   order: 0;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  -ms-overflow-style: -ms-autohiding-scrollbar;
-  margin-bottom: auto; }
-
-.bottom {
-  margin-top: auto; }
+  -ms-overflow-style: -ms-autohiding-scrollbar; }
+  space .top {
+    margin-bottom: auto; }
+  space .bottom {
+    margin-top: auto; }
 
 .dice {
   font-size: 1.5rem;
