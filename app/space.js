@@ -17,7 +17,7 @@ angular.module("acey-deucey").directive("space", function() {
                     polygonPoints: "0,350 100,350 50,0",
                     groupTransform: "translate(17, 220)",
                     svgClass: "space bottom"                    
-                }
+                };
             } else {
                 scope.orientationParams = {
                     polygonPoints: "0,0 100,0 50,350",
