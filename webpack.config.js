@@ -6,6 +6,7 @@ module.exports = {
         path: __dirname,
         filename: "built.js"
     },
+    devtool: 'inline-source-map',
     module: {
         loaders: [
             {
