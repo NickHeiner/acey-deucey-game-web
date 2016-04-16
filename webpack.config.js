@@ -6,11 +6,13 @@ module.exports = {
         path: __dirname,
         filename: "built.js"
     },
-    loaders: [
-        {
-            test: /\.js$/,
-            exclude: /node_modules/,
-            loader: "babel",
-        }
-    ]
+    module: {
+        loaders: [
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                loader: "babel",
+            }
+        ]
+    }
 };
